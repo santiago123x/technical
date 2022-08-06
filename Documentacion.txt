@@ -1,0 +1,72 @@
+Requerimientos Funcionales
+
+
+- Requerimiento #1
+
+        * Visualización del ganado registrados
+
+        Descripción:
+            Se debe permitr por medio del sistema de información visualizar los datos del ganado registrado.
+
+        Historia de Usuario:
+
+        Como funcionario publico, quiero visualizar la información del ganado registrado, 
+        para informarme acerca de su porpietario y ubicación.
+        Criterio de aceptación:
+		El sistema de información mostrara una tabla de todo el ganado registradoa con su respectiva información.
+
+
+
+- Requerimiento #2
+
+        * Visualización de las zonas afectadas por la deforestación
+
+        Descripción:
+            Se debe permitr por medio del sistema de información visualizar las zonas afectadas por la deforestación
+
+        Historia de Usuario:
+
+        Como funcionario publico, quiero visualizar la información de las zonas deforestadas que se han registrado, 
+        para informarme acerca de las zonas donde se debe realizar las campañas de pedagogicas.
+        Criterio de aceptación:
+		El sistema de información mostrara un mapa de las zonas afectadas.
+
+
+	
+El sistema debe permitir la visualización de la información de los animales que se encuentra en zonas de deforestación
+
+	Requerimiento  3
+	nombre de historia de usuario: 
+		Animales que afectan las zonas
+	Como:
+		Usuario
+	Descripción:
+		Quiero visualizar un listado de los animales que afectan cada una de  las zonas deforestadas 
+	Aceptación:
+		El sistema muestra un listado de todas las zonas deforestada y un desplegable con la información de cada uno de los animales que afectan cada zona y sus alrededores
+
+El sistema debe permitir el filtrado de las zonas afectadas por su ubicación.
+
+	Requerimiento 4
+	nombre de historia de usuario: 
+		Filtrado de animales 
+	Como:
+		Usuario
+	Descripción:
+		Quiero poder filtrar los animales por su información
+	Aceptación:
+		El sistema permite filtrar el listado de animales tanto por el nombre de propietario como por su ubicación
+
+
+Requerimientos no Funcionales
+
+    - Seguridad en los datos.
+        Se validara por medio de JWT la sesion del usuario.
+    - Requisitos de software
+        El front-end se desarrollara en React JS en Vite
+        El back-end se desarrollara en Node JS con Express
+        Acceso a un navegador web (Chrome, Firefox, Edge, etc)
+    - Requisitos de hardware
+        Se requiere acceso a internet.
+        Se requiere un dispositivo con acceso a un navegador.
+
