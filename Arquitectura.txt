@@ -1,0 +1,40 @@
+Arquitectura de software:
+
+
+    Se planteo un modelo basico de cliente-servidor, el cual consta de una capa de servicios los cuales son consumidos por
+    el cliente.
+
+    El cliente se divide en vistas (Cada ruta o pagina del cliente), componentes (componentes reusables entre las vistas),
+    CustomHooks (Hooks para simplificar los llamados http), Context (contexto en el que vive el estado global), 
+    Router (las rutas con su asignación de componentes)
+
+    Cliente:
+
+        - public
+        - src
+            - assets
+            - Components
+            - Context
+            - CustomHooks
+            - Router
+            - Views
+                - Login
+                - cattleRisk
+                - zoneMap
+                - cattleInfo
+            - Index
+
+
+    El servidor se divide en conexion (donde se establece la conexion con la base de datos), 
+    controllers (cada controlador con sus respectivas funciones), routers (donde se asignan las rutas 
+    asociadas a los controladores)
+    
+    Servidor:
+
+        - index
+        - conexion
+        - controllers
+            - cattle
+            - user
+            - zones
+        - routers

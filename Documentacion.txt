@@ -31,37 +31,23 @@ Requerimientos Funcionales
         Criterio de aceptación:
 		El sistema de información mostrara un mapa de las zonas afectadas.
 
+- Requerimiento #3
 
-	
-El sistema debe permitir la visualización de la información de los animales que se encuentra en zonas de deforestación
+        * Visualización del ganado que se encuentra dentro de las zonas de deforestación
 
-	Requerimiento  3
-	nombre de historia de usuario: 
-		Animales que afectan las zonas
-	Como:
-		Usuario
-	Descripción:
-		Quiero visualizar un listado de los animales que afectan cada una de  las zonas deforestadas 
-	Aceptación:
-		El sistema muestra un listado de todas las zonas deforestada y un desplegable con la información de cada uno de los animales que afectan cada zona y sus alrededores
+        Descripción:
+            Se debe permitr por medio del sistema de información visualizar el ganado afectado por las zonas de deforestación
 
-El sistema debe permitir el filtrado de las zonas afectadas por su ubicación.
+        Historia de Usuario:
 
-	Requerimiento 4
-	nombre de historia de usuario: 
-		Filtrado de animales 
-	Como:
-		Usuario
-	Descripción:
-		Quiero poder filtrar los animales por su información
-	Aceptación:
-		El sistema permite filtrar el listado de animales tanto por el nombre de propietario como por su ubicación
+        Como funcionario publico, quiero visualizar la información el ganado afectado por las zonas de deforestación, 
+        para informarme conocer el ganado afectado.
+        Criterio de aceptación:
+		El sistema de información mostrara un mapa de las zonas afectadas con una marca de cada animal con su propietario.
 
 
 Requerimientos no Funcionales
 
-    - Seguridad en los datos.
-        Se validara por medio de JWT la sesion del usuario.
     - Facilidad de despliegue.
         Se debe guardar una imagen de docker para facilitar el despliegue.
     - Requisitos de software
@@ -71,4 +57,31 @@ Requerimientos no Funcionales
     - Requisitos de hardware
         Se requiere acceso a internet.
         Se requiere un dispositivo con acceso a un navegador.
+
+
+
+Alcance del aplicativo:
+
+
+    Objetivos del proyecto: 
+        
+        Con el proyecto se le dara la posibilidad a las entidades gubernamentales de realizar la revisión de la información
+        de el ganado y zonas afectadas por la deforestación, asi mismo se podra visualizar un mapa donde 
+        encontrara el ganado dentro de estas zonas.
+
+
+    Entregables:
+
+        Visualización de una tabla con información del ganado y las zonas.
+        Visualización de un mapa con las marcas o zonas del ganado o zona seleccionada.
+        Visualización de un mapa con las zonas afectadas por la deforestación y los puntos donde se encuentran los animales.
+        Login de acceso al aplicativo.
+    
+
+    Fuera del alcance:
+
+        Posiblidad de adicionar información de nuevo ganado o zonas de deforestación.
+        Capa de seguridad de los servicios.
+        Filtros para la información.
+
 
