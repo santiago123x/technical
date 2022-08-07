@@ -1,4 +1,4 @@
-import { useState,useContext,useLayoutEffect } from "react";
+import React,{ useState,useContext,useLayoutEffect } from "react";
 import Map from "../../Components/Map";
 import useAxios from "../../CustomHooks/useAxios";
 import Loading from "../../Components/Loading";

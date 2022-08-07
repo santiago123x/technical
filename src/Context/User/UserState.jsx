@@ -1,4 +1,4 @@
-import { useReducer } from "react";
+import React,{ useReducer } from "react";
 import UserContext from "./UserContext";
 import reducer from "./UserReducer";
 
