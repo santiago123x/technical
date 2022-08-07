@@ -1,20 +1,13 @@
 import { useState } from "react";
-import { FcCollapse, FcExpand } from "react-icons/fc";
-import Box from "@mui/material/Box";
-import Collapse from "@mui/material/Collapse";
-import IconButton from "@mui/material/IconButton";
 import TableRow from "@mui/material/TableRow";
 import TableCell from "@mui/material/TableCell";
-import Typography from "@mui/material/Typography";
-import Table from "@mui/material/Table";
-import TableBody from "@mui/material/TableBody";
-import TableHead from "@mui/material/TableHead";
-import useAxios from "../../../CustomHooks/useAxios";
+import { notify } from "../../Notify";
 
 const Row = ({ firstData, title, setZoneSelect }) => {
   const [open, setOpen] = useState(false);
   const data = [];
   const changeSelect = () => {
+    notify("Realiza un click en el mapa para buscar el punto !", "", "info");
     setZoneSelect(firstData);
   };
   return (

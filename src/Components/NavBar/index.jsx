@@ -51,7 +51,7 @@ const NavBar = () => {
 
   const handleCloseUserMenu = () => {
     dispatch({ type: "LOGOUT" });
-    navigate("/zone-map");
+    navigate("/");
     setAnchorElUser(null);
 
   };

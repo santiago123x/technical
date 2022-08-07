@@ -6,6 +6,7 @@ import Login from "../Views/Login";
 import Layout from "../Components/Layout";
 import Error404 from "../Components/Error";
 import UserState from '../Context/User/UserState'
+import { ToastContainer } from "react-toastify";
 // import your route components too
 
 const Router = () => {
@@ -50,6 +51,7 @@ const Router = () => {
             }
           ></Route>
         </Routes>
+        <ToastContainer />
       </BrowserRouter>
     </UserState>
   );

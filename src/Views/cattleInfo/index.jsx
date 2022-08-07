@@ -1,11 +1,12 @@
-import { useState } from "react";
+import { useState,useContext,useLayoutEffect } from "react";
 import TableComplete from "../../Components/Table/Index";
 import useAxios from "../../CustomHooks/useAxios";
 import Loading from "../../Components/Loading";
 import Error404 from "../../Components/Error";
-import Search from "../../Components/Search";
 import Map from '../../Components/Map'
 import './index.css'
+import UserContext from "../../Context/User/UserContext";
+import { useNavigate } from "react-router-dom";
 
 const CattleInfo = () => {
   const [cattleSelect, setCattleSelect] = useState(null);
@@ -13,6 +14,13 @@ const CattleInfo = () => {
   const [url, setUrl] = useState(`/cattle`);
   const [recharge, setRecharge] = useState(false);
   const { data, error, loading } = useAxios(url, recharge);
+  const {  user } = useContext(UserContext);
+  const navigate = useNavigate();
+  useLayoutEffect(() => {
+    if (!user.user) {
+      navigate("/");
+    }
+  }, [user]);
   const columns = ["id","Propietario", "Codigo Animal", "Longitud", "Latitud", "Opciones" ];
   return (
     <>
@@ -21,14 +29,6 @@ const CattleInfo = () => {
           <h2 className="cont__lista-titulo">Listado del Ganado</h2>
 
           <hr className="linea-h2" />
-          <div className="contSearch">
-            <Search
-              valueInp={searchValue}
-              setValueInp={setSearchValue}
-              titulo="Filtrar Ganado"
-              tooltip={`Tipos de Filtro: - Propietario - Codigo - Coordenadas`}
-            />
-          </div>
           <div className="cont__lista-tabla">
             {loading ? (
               <Loading />

@@ -1,16 +1,15 @@
-import React, { useState, useEffect, useContext } from "react";
+import React, { useState, useEffect, useContext,useLayoutEffect } from "react";
 
 import InputAdornment from "@mui/material/InputAdornment";
 import { FaKey, FaUser, FaCheck } from "react-icons/fa";
 import ciat from "../../assets/ciat.png";
 import llama from "../../assets/llama.gif";
 import "./index.css";
-import { ToastContainer } from "react-toastify";
 import axiosIntance from "../../axiosConfig";
 import { notify } from "../../Components/Notify";
 import { useNavigate } from "react-router-dom";
 import Input from "@mui/material/Input";
-import UserContext from "../Context/User/UserContext";
+import UserContext from "../../Context/User/UserContext";
 
 const Login = () => {
   const [userInput, setUserInput] = useState("");
@@ -42,7 +41,7 @@ const Login = () => {
       if (response.status === 200) {
         const data = response.data;
         if (response.data.isAuth) {
-          const email = data.email;
+          const email = data.user;
           setVerify(true);
           dispatch({ type: "LOGIN", payload: data });
           notify("Bienvenido: ", email, "info");
@@ -108,7 +107,6 @@ const Login = () => {
           )}
         </button>
       </div>
-      <ToastContainer />
     </div>
   );
 };

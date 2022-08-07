@@ -71,7 +71,6 @@ const Map = ({ dataSelect, type }) => {
         {dataSelect &&
           dataSelect.zones &&
           dataSelect.zones.map((zone) => {
-              console.log(zone)
             return (
               <Circle
                 center={[zone.latitude, zone.longitude]}

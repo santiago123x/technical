@@ -39,9 +39,10 @@ import "./index.css";
           </TableHead>
           <TableBody>
             {data.length !== 0 &&
-              data.map((dat) => {
+              data.map((dat,index) => {
                 return (
                   <Row
+                  key={index}
                   setZoneSelect={setZoneSelect}
                     align="center"
                     firstData={dat}
