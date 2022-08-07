@@ -62,6 +62,8 @@ Requerimientos no Funcionales
 
     - Seguridad en los datos.
         Se validara por medio de JWT la sesion del usuario.
+    - Facilidad de despliegue.
+        Se debe guardar una imagen de docker para facilitar el despliegue.
     - Requisitos de software
         El front-end se desarrollara en React JS en Vite
         El back-end se desarrollara en Node JS con Express

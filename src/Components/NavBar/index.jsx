@@ -1,4 +1,4 @@
-import {useState} from 'react';
+import {useState,useContext} from 'react';
 import AppBar from '@mui/material/AppBar';
 import Box from '@mui/material/Box';
 import Toolbar from '@mui/material/Toolbar';
@@ -13,15 +13,16 @@ import Tooltip from '@mui/material/Tooltip';
 import MenuItem from '@mui/material/MenuItem';
 import AdbIcon from '@mui/icons-material/Adb';
 import { useNavigate } from "react-router-dom";
+import UserContext from "../../Context/User/UserContext";
 
 const pages = ['Información del Ganado', 'Zonas Afectadas', 'Ganado Afectado'];
 const settings = ['LogOut'];
 
 const NavBar = () => {
-  const navigate = useNavigate();
+  const { dispatch } = useContext(UserContext);
   const [anchorElNav, setAnchorElNav] = useState(null);
   const [anchorElUser, setAnchorElUser] = useState(null);
-
+  const navigate = useNavigate();
   const handleOpenNavMenu = (event) => {
     setAnchorElNav(event.currentTarget);
   };
@@ -49,7 +50,10 @@ const NavBar = () => {
   };
 
   const handleCloseUserMenu = () => {
+    dispatch({ type: "LOGOUT" });
+    navigate("/zone-map");
     setAnchorElUser(null);
+
   };
 
   return (
