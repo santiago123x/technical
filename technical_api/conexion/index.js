@@ -2,7 +2,7 @@ const keys = require('../keys/keys.js')
 const { Pool } = require('pg');
 
 const pool = new Pool({
-    connectionString:keys.sqlURI,
+    connectionString: keys.pgURI,
     ssl: {
       rejectUnauthorized: false
     }

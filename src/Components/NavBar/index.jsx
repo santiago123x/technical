@@ -31,7 +31,6 @@ const NavBar = () => {
 
   const handleCloseNavMenu = (e, pages) => {
     setAnchorElNav(null);
-    console.log(pages)
     switch(pages){
       case 0:
         navigate("/cattle-info");

@@ -1,12 +1,12 @@
 import React, { useState, useEffect } from "react";
 import "./index.css";
 import ErrorImage from "./error.png";
-import Button from "@material-ui/core/Button";
+import Button from "@mui/material/Button";
 import { useNavigate } from "react-router-dom";
 
 export const Error404 = ({
   error = "Se ha Producido un Error, Por favor Recargue la Pagina.",
-  ancho = 400,
+  width = 400,
   boton = false,
 }) => {
   let navigate = useNavigate();
@@ -17,7 +17,7 @@ export const Error404 = ({
 
   const [clase, setClase] = useState(null);
   useEffect(() => {
-    if (ancho <= 200) {
+    if (width <= 200) {
       setClase("small");
     } else {
       setClase("big");
@@ -25,7 +25,7 @@ export const Error404 = ({
   }, []);
   return (
     <div className="error-container">
-      <img width={ancho} className="cont__error-img" src={ErrorImage}></img>
+      <img width={width} className="cont__error-img" src={ErrorImage}></img>
       {clase && <h3 className={`titulo ${clase}`}>Error: {error}</h3>}
       {boton && (
         <div className="button-error">
